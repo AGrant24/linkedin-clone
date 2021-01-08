@@ -1,6 +1,6 @@
 import firebase from "firebase";
 const firebaseConfig = {
-  apiKey: "AIzaSyDsZj5yTVS1yNvfZX3RxPG1GVPShDsJi_0",
+  apiKey: "AIzaSyDsZj5yTVS1yNvfZX3RxPG1GVPShDsJi_0", //delete this when public
   authDomain: "linkedin-clone-39a89.firebaseapp.com",
   projectId: "linkedin-clone-39a89",
   storageBucket: "linkedin-clone-39a89.appspot.com",

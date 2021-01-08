@@ -9,7 +9,13 @@
 
 .sidebar__avatar {
   margin-bottom: 10px;
+  background-color: #0a66c2;
 }
+
+/* To change avatar background color > */
+/* .MuiAvatar-colorDefault {
+  background-color: #5c92ac !important;
+} */
 
 .sidebar__top {
   display: flex;

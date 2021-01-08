@@ -1,15 +1,18 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/userSlice";
 import "./Sidebar.css";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
   const recentItem = (topic) => (
     <div className="sidebar__recentItem">
       <span className="sidebar__hash">#</span>
       <p>{topic}</p>
     </div>
   );
-
+  //https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Colorful-Geometric-Simple-Background-Image.jpg
   return (
     <div className="sidebar">
       {/* Sidebar profile */}
@@ -18,10 +21,13 @@ function Sidebar() {
           src="https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Colorful-Geometric-Simple-Background-Image.jpg"
           alt=""
         />
-        <Avatar />
-        <h2>Alex Grant</h2>
+        <Avatar src={user.photoUrl} className="sidebar__avatar">
+          {user.email[0]}
+        </Avatar>
 
-        <h4>Father - Musician - Future Web developer</h4>
+        <h2>{user.displayName}</h2>
+
+        <h4>{user.email}</h4>
       </div>
       {/* Stats */}
       <div className="sidebar__stats">
